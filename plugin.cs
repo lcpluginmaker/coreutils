@@ -32,6 +32,7 @@ namespace LeoConsole_ExamplePlugin {
       _Commands.Add(new Clear());
       _Commands.Add(new Echo());
       _Commands.Add(new Yes());
+      _Commands.Add(new Cat());
     }
   }
 }
