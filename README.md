@@ -12,6 +12,15 @@ practice, I don't see another reason why), I would highly appreciate it. Just
 open an issue and tell what you are working on. When it's ready and I have
 reviewed a pull request, it will be likely merged.
 
+## Installing
+
+in LeoConsole, type
+
+```
+pkg update
+pkg get coreutils
+```
+
 ## Contributing
 
 I am open for any kind of pull requests and if your idea does make sense, it's
