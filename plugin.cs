@@ -29,10 +29,12 @@ namespace LeoConsole_ExamplePlugin {
   
       _Commands = new List<ICommand>();
       _Commands.Add(new Basename());
+      _Commands.Add(new Cat());
       _Commands.Add(new Clear());
       _Commands.Add(new Echo());
+      _Commands.Add(new Hostname());
+      _Commands.Add(new Ls());
       _Commands.Add(new Yes());
-      _Commands.Add(new Cat());
     }
   }
 }
