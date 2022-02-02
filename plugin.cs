@@ -34,6 +34,7 @@ namespace LeoConsole_ExamplePlugin {
       _Commands.Add(new Echo());
       _Commands.Add(new Hostname());
       _Commands.Add(new Ls());
+      _Commands.Add(new Printenv());
       _Commands.Add(new Yes());
     }
   }
