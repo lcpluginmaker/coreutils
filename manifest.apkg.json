@@ -1,0 +1,15 @@
+{
+  "manifestVersion": 1.0,
+  "packageName": "coreutils",
+  "build": {
+    "command": "dotnet",
+    "args": "build",
+    "folder": "."
+  },
+  "project": {
+    "maintainer": "alexcoder04",
+    "email": "alexcoder04@protonmail.com",
+    "homepage": "https://github.com/alexcoder04/LeoConsole-coreutils",
+    "bugTracker": "https://github.com/alexcoder04/LeoConsole-coreutils/issues"
+  }
+}
