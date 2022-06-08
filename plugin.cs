@@ -10,7 +10,10 @@ namespace LeoConsole_ExamplePlugin {
     public string SavePath { get { return _SavePath; } set { _SavePath = value; } }
     public static string _DownloadPath;
     public string DownloadPath { get { return _DownloadPath; } set { _DownloadPath = value; } }
-    public string Version { get { return "?"; } } // this will be removed soon
+    public static string _Version;
+    public string Version { get { return _Version; } set { _Version = value; } }
+    public static string _CurrentWorkingPath;
+    public string CurrentWorkingPath { get { return _CurrentWorkingPath; } set { _CurrentWorkingPath = value; } }
   }
   
   public class ExamplePlugin : IPlugin {
@@ -24,9 +27,12 @@ namespace LeoConsole_ExamplePlugin {
     private List<ICommand> _Commands;
     public List<ICommand> Commands { get { return _Commands; } set { _Commands = value; } }
   
-    public void PluginMain() {
+    public void PluginInit(){
       _data = new ConsoleData();
-  
+      _Commands = new List<ICommand>();
+    }
+
+    public void RegisterCommands() {
       _Commands = new List<ICommand>();
       _Commands.Add(new Basename());
       _Commands.Add(new Cat());
@@ -34,12 +40,13 @@ namespace LeoConsole_ExamplePlugin {
       _Commands.Add(new Clear());
       _Commands.Add(new Echo());
       _Commands.Add(new Hostname());
-      _Commands.Add(new Ls());
-      _Commands.Add(new Mkdir());
       _Commands.Add(new Printenv());
       _Commands.Add(new Sleep());
       _Commands.Add(new Yes());
     }
+
+    public void PluginMain() { }
+    public void PluginShutdown() { }
   }
 }
 

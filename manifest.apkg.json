@@ -1,15 +1,18 @@
 {
-  "manifestVersion": 1.0,
-  "packageName": "coreutils",
-  "build": {
-    "command": "dotnet",
-    "args": "build",
-    "folder": "."
-  },
-  "project": {
-    "maintainer": "alexcoder04",
-    "email": "alexcoder04@protonmail.com",
-    "homepage": "https://github.com/alexcoder04/LeoConsole-coreutils",
-    "bugTracker": "https://github.com/alexcoder04/LeoConsole-coreutils/issues"
-  }
+    "manifestVersion": 2.1,
+    "packageName": "coreutils",
+    "packageVersion": "0.2.0",
+    "build": {
+        "command": "dotnet",
+        "args": ["build", "--nologo"],
+        "folder": ".",
+        "dlls": ["coreutils.dll"],
+        "share": "./share"
+    },
+    "project": {
+        "maintainer": "alexcoder04",
+        "email": "alexcoder04@protonmail.com",
+        "homepage": "https://github.com/alexcoder04/LeoConsole-coreutils",
+        "bugTracker": "https://github.com/alexcoder04/LeoConsole-coreutils/issues"
+    }
 }
