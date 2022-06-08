@@ -14,11 +14,10 @@ reviewed a pull request, it will be likely merged.
 
 ## Installing
 
-in LeoConsole, type
+Coreutils is in the main package repository, just
 
 ```
-pkg update
-pkg get coreutils
+apkg get coreutils
 ```
 
 ## Contributing
@@ -27,3 +26,4 @@ I am open for any kind of pull requests and if your idea does make sense, it's
 very likely to be merged. You can also suggest new features if you want, but
 don't hope that I'm going to work on them, remember this is only a tiny side
 project.
+
