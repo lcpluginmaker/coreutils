@@ -1,7 +1,9 @@
 {
-    "manifestVersion": 2.1,
+    "manifestVersion": 3.0,
     "packageName": "coreutils",
-    "packageVersion": "0.2.0",
+    "packageVersion": "0.3.0",
+    "depends": [],
+    "compatibleVersions": ["2.0.0"],
     "build": {
         "command": "dotnet",
         "args": ["build", "--nologo"],

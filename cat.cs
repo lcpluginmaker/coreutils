@@ -7,16 +7,17 @@ namespace LeoConsole_ExamplePlugin {
   public class Cat : ICommand {
     public string Name { get { return "cat"; } }
     public string Description { get { return "print contents of a file"; } }
-    public Action CommandFunktion { get { return () => Command(); } }
-    private string[] _InputProperties;
-    public string[] InputProperties { get { return _InputProperties; } set { _InputProperties = value; } }
+    public Action CommandFunction { get { return () => Command(); } }
+    public Action HelpFunction { get { return () => Console.WriteLine("not available"); } }
+    private string[] _Arguments;
+    public string[] Arguments { get { return _Arguments; } set { _Arguments = value; } }
     public void Command() {
-      if (_InputProperties.Length < 2) {
+      if (_Arguments.Length < 2) {
         Console.WriteLine("you need to provide an argument");
         return;
       }
       try {
-        Console.WriteLine(File.ReadAllText(_InputProperties[1]));
+        Console.WriteLine(File.ReadAllText(_Arguments[1]));
       } catch (Exception e) {
         Console.WriteLine("error: " + e.Message);
       }

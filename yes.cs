@@ -7,15 +7,16 @@ namespace LeoConsole_ExamplePlugin {
   public class Yes : ICommand {
     public string Name { get { return "yes"; } }
     public string Description { get { return "output a string repeatedly until killed"; } }
-    public Action CommandFunktion { get { return () => Command(); } }
-    private string[] _InputProperties;
-    public string[] InputProperties { get { return _InputProperties; } set { _InputProperties = value; } }
+    public Action CommandFunction { get { return () => Command(); } }
+    public Action HelpFunction { get { return () => Console.WriteLine("not available"); } }
+    private string[] _Arguments;
+    public string[] Arguments { get { return _Arguments; } set { _Arguments = value; } }
     public void Command() {
       string str;
-      if (_InputProperties.Length < 2) {
+      if (_Arguments.Length < 2) {
         str = "y";
       } else {
-        str = _InputProperties[1];
+        str = _Arguments[1];
       }
       while (true) {
         Console.WriteLine(str);

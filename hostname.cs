@@ -8,9 +8,10 @@ namespace LeoConsole_ExamplePlugin {
   public class Hostname : ICommand {
     public string Name { get { return "hostname"; } }
     public string Description { get { return "print computer's hostname"; } }
-    public Action CommandFunktion { get { return () => Command(); } }
-    private string[] _InputProperties;
-    public string[] InputProperties { get { return _InputProperties; } set { _InputProperties = value; } }
+    public Action CommandFunction { get { return () => Command(); } }
+    public Action HelpFunction { get { return () => Console.WriteLine("not available"); } }
+    private string[] _Arguments;
+    public string[] Arguments { get { return _Arguments; } set { _Arguments = value; } }
 
     public void Command() {
       Console.WriteLine(Dns.GetHostName());

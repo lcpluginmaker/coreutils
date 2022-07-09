@@ -7,15 +7,16 @@ namespace LeoConsole_ExamplePlugin {
   public class Basename : ICommand {
     public string Name { get { return "basename"; } }
     public string Description { get { return "print name with any leading directory components removed"; } }
-    public Action CommandFunktion { get { return () => Command(); } }
-    private string[] _InputProperties;
-    public string[] InputProperties { get { return _InputProperties; } set { _InputProperties = value; } }
+    public Action CommandFunction { get { return () => Command(); } }
+    public Action HelpFunction { get { return () => Console.WriteLine("not available"); } }
+    private string[] _Arguments;
+    public string[] Arguments { get { return _Arguments; } set { _Arguments = value; } }
     public void Command() {
-      if (_InputProperties.Length < 2) {
+      if (_Arguments.Length < 2) {
         Console.WriteLine("you need to provide an argument");
         return;
       }
-      Console.WriteLine(Path.GetFileName(_InputProperties[1]));
+      Console.WriteLine(Path.GetFileName(_Arguments[1]));
     }
   }
 }
