@@ -1,9 +1,9 @@
 {
-    "manifestVersion": 3.0,
+    "manifestVersion": 4.0,
     "packageName": "coreutils",
-    "packageVersion": "0.3.0",
+    "packageVersion": "0.3.1",
     "depends": [],
-    "compatibleVersions": ["2.1.0"],
+    "compatibleVersions": ["2.2.0"],
     "build": {
         "command": "dotnet",
         "args": ["build", "--nologo"],
@@ -14,7 +14,7 @@
     "project": {
         "maintainer": "alexcoder04",
         "email": "alexcoder04@protonmail.com",
-        "homepage": "https://github.com/alexcoder04/LeoConsole-coreutils",
-        "bugTracker": "https://github.com/alexcoder04/LeoConsole-coreutils/issues"
+        "homepage": "https://github.com/lcpluginmaker/coreutils",
+        "bugTracker": "https://github.com/lcpluginmaker/coreutils/issues"
     }
 }
